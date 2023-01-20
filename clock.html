@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="clock.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <h1 id="top"> Clock</h1>
+        <br>
+        <div class="circle">
+            <div class="clock second"></div>
+            <div class="clock minute"></div>
+            <div class="clock hour"></div>
+        </div>
+        <br>
+        <ul>
+            <h3>Second Hand : Black-color </h3>
+            <h3>Minute Hand : Brown-color</h3>
+            <h3>Hour Hand : Silver-color </h3>
+        </ul>
+    </div>
+
+    <script>
+
+        function setDate() {
+            const now = new Date()
+            const sec = now.getSeconds()
+            const mins = now.getMinutes()
+            const hour = now.getHours()
+
+            const secdeg = (((sec / 60) * 360) + 90) + "deg";
+            const mindeg = ((mins * 6 + (sec / 3600) * 360) + 90) + "deg"
+            const hourdeg = hour * 30 + ((mins * 6 + (sec / 3600) * 360)) / 12 + 90 + "deg"
+
+            document.querySelector('.second').style.transform = `rotate(${secdeg})`
+            document.querySelector('.minute').style.transform = `rotate(${mindeg})`
+            document.querySelector('.hour').style.transform = `rotate(${hourdeg})`
+
+        }
+        setInterval(setDate, 1000);
+    </script>
+</body>
+
+</html>

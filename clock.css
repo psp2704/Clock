@@ -1,0 +1,58 @@
+body{
+    margin: 20px;
+    background: linear-gradient(180deg, rgba(233,87,203,1) 0%, rgba(224,195,63,1) 52%, rgba(233,87,215,1) 100%);
+}
+
+#top{
+    text-align: center;
+    text-decoration: underline;
+
+}
+.circle{
+    height: 300px;
+    width: 300px;
+    border: 5px solid black;
+    border-radius: 50%;
+    position: relative;
+    background: url(clock-bg.png);
+    background-size: 100%;
+    margin: auto
+    
+   
+    }
+    
+
+    ul{
+        text-align: center;
+    }
+   
+    .clock{
+        height: 5px;
+        width: 130px;
+        background-color:  black;
+        position: absolute;
+        top: 50%;
+        left : 5%;   
+        transform-origin: 100%;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+    
+    .second{
+    background-color: black;
+    }
+    
+    .minute{
+      
+        background-color: brown; 
+    }
+    
+    .hour{
+        background-color: rgb(65, 64, 64);
+    
+    }
+ 
+    
+    
+    
+    
